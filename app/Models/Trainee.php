@@ -10,9 +10,10 @@ class Trainee extends Model
     use HasFactory;
 
     public function user(){
-        return $this->belongsTo('App\Users');
+        return $this->belongsTo('App\Models\User');
     }
+
     public function course(){
-        return $this->belongsTo('App\Course');
+        return $this->belongsTo('App\Model\Course');
     }
 }

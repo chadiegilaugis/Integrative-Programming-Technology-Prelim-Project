@@ -41,10 +41,13 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+
     public function trainors(){
-        return $this->hasMany('App\Trainor');
+        return $this->hasMany('App\Models\Trainor');
     }
+
     public function trainess(){
-        return $this->hasMany('App\Trainee');
+        return $this->hasMany('App\Model\Trainee');
     }
 }
